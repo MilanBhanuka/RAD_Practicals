@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student
+        {
+            indexNumber;
+            name;
+            dateOfBirth;
+            address;
+            contactNumber;
+            email;
+            groupNumber;
+
+            constructor(indexNumber,name,dateOfBirth,address,contactNumber,email)
+            {
+                this.indexNumber=indexNumber;
+                this.name=name;
+                this.dateOfBirth=dateOfBirth;
+                this.address=address;
+                this.contactNumber=contactNumber;
+                this.email=email;
+                this.groupNumber=null;
+            }
+            showStudentDetails()
+            {
+                  document.write("Index Number : ",this.indexNumber);
+                  document.write("<br>");
+                  document.write("Name : ",this.name);
+                  document.write("<br>");
+                  document.write("Date of Birth : ",this.dateOfBirth);
+                  document.write("<br>");
+                  document.write("Address : ",this.address);
+                  document.write("<br>");
+                  document.write("Contact Number : ",this.contactNumber);
+                  document.write("<br>");
+                  document.write("Email : ",this.email);
+                  document.write("<br>");
+            }
+            setGroupNumber()
+            {
+                const remainder = this.indexNumber % 4;
+                if(remainder==0){
+                    this.groupNumber=1;
+                }else if(remainder==1){
+                    this.groupNumber=2;
+                }else if(remainder==2){
+                    this.groupNumber=3;
+                }else if(remainder==3){
+                    this.groupNumber=4;
+                }
+            }
+            showGroupNumber()
+            {
+                if(this.groupNumber==null){
+                    document.write("Group number not set");
+                    document.write("<br>");
+                }else{
+                    document.write("Group Number : ",this.groupNumber);
+                    document.write("<br>");
+                }
+            }
+        }
+        const stu1 = new Student(21000239,"Milan Bhanuka","2001/08/05","No106,Diyagaha,Matara","0716720864","vgmbhanuka@gmail.com");
+        stu1.showStudentDetails();
+        stu1.setGroupNumber();
+        stu1.showGroupNumber();
+    </script>
+</body>
+</html>

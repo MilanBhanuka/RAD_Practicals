@@ -1,0 +1,46 @@
+<html>
+
+<body>
+    <script>
+
+class Dog{
+
+    constructor(Breed,Age,Color){
+       this.Breed=Breed;
+       this.Age=Age;
+       this.Color=Color;
+
+    }
+
+    sleep(){
+        return(this.Breed+" is sleeping");
+
+    }
+
+    Eat(){
+        return (this.Breed+" is eating")
+    }
+
+    sit(){
+        return (this.Breed+" is sitting")
+    }
+
+    Run(){
+        return (this.Breed+" is running")
+    }
+
+}
+
+     const dog1=new Dog("Pug",3,"Black")
+     const dog2=new Dog("Boxer",2,"White")
+     const dog3=new Dog("Poodle",1,"Brown")
+
+     document.write(dog1.Breed+" is "+dog1.Age+" years old. "+dog1.sleep()+"<br>")
+     document.write(dog2.Breed+" is "+dog2.Color+" and "+dog2.Eat()+"<br>")
+     document.write(dog3.Breed+" is "+" and "+dog3.Run())
+     
+
+
+</script>
+</body>
+</html>

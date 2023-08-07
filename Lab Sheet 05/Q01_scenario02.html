@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Examination Result</title>
+</head>
+<body>
+    <h1>Examination Result</h1>
+    <form>
+        <label for="indexNumber">Index Number:</label>
+        <input type="text" id="indexNumber"><br><br>
+        <label for="mcqMarks">MCQ Marks:</label>
+        <input type="number" id="mcqMarks"><br><br>
+        <label for="essayMarks">Essay Marks:</label>
+        <input type="number" id="essayMarks"><br><br>
+        <button type="button" onclick="calculateResult()">Calculate Result</button>
+    </form>
+    <br>
+    <div id="totalMarks"></div>
+    <div id="passFail"></div>
+    <div id="grade"></div>
+    <script>
+        function calculateResult() 
+        {
+            // Get input values from the form
+            var indexNumber = document.getElementById("indexNumber").value;
+            var mcqMarks = parseInt(document.getElementById("mcqMarks").value);
+            var essayMarks = parseInt(document.getElementById("essayMarks").value);
+
+            // Calculate total marks
+            var totalMarks = mcqMarks + essayMarks;
+
+            // Display total marks
+            document.getElementById("totalMarks").innerHTML = "Total9 Marks: " + totalMarks;
+
+            // Display whether "Pass" or "Fail"
+            var passFail = (totalMarks >= 50) ? "Pass" : "Fail";
+            document.getElementById("passFail").innerHTML = "Result: " + passFail;
+
+            // Display the grade
+            var grade;
+            if (totalMarks >= 75) {
+                grade = "A";
+            } else if (totalMarks >= 65 && totalMarks < 75) {
+                grade = "B";
+            } else if (totalMarks >= 55 && totalMarks < 65) {
+                grade = "C";
+            } else if (totalMarks >= 35 && totalMarks < 55) {
+                grade = "S";
+            } else {
+                grade = "W";
+            }
+            document.getElementById("grade").innerHTML = "Grade: " + grade;
+        }
+    </script>
+</body>
+</html>
+

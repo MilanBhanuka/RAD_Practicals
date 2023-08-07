@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+     <body>
+        <p>Q01--------------------------</p>
+        <script>
+            const mammal={
+                color:"orange",
+                type:"cat",
+                legs:4,
+                name:"kitty",
+                speed:24,
+            };
+            document.write(mammal.type);
+            document.write("<br>");
+            document.write(mammal.name)
+        </script>
+        <br>
+        <p>Q02--------------------------</p>
+        <script>
+            const person={
+                firstName:"John",
+                lastName:"Doe",
+                id:5566,
+                fullName:function(){
+                    return this.firstName+" "+this.lastName;
+                }
+            };
+            var fn = person.fullName()
+            document.write(fn)
+        </script>
+        <br>
+        <p>Q03--------------------------</p>
+        <script>
+            const triangle={
+                Height:25,
+                base:24,
+                color:"red",
+                area:function(){
+                    return this.Height*this.base*0.5;
+                }
+            };
+            var a=triangle.area()
+            document.write(a)
+        </script>
+     </body>
+</html>

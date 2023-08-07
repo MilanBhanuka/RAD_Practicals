@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>Tutorial 5 Question 4</title>
+  <script>
+    class Game {
+      constructor(level, theme, avatar) {
+        this.level = level;
+        this.theme = theme;
+        this.avatar = avatar;
+        this.isPlaying = false;
+      }
+
+      checkWinningState() {
+        throw new Error("Abstract method checkWinningState() not implemented.");
+      }
+
+      startGame() {
+        this.isPlaying = true;
+        console.log("Game started!");
+      }
+
+      pauseGame() {
+        if (this.isPlaying) {
+          console.log("Game paused.");
+          this.isPlaying = false;
+        } else {
+          console.log("Game is already paused.");
+        }
+      }
+
+      resumeGame() {
+        if (!this.isPlaying) {
+          console.log("Game resumed.");
+          this.isPlaying = true;
+        } else {
+          console.log("Game is already playing.");
+        }
+      }
+
+      cancelGame() {
+        console.log("Game canceled.");
+        this.isPlaying = false;
+      }
+    }
+
+    class CarGame extends Game {
+      constructor(level, theme, avatar) {
+        super(level, theme, avatar);
+        this.winningScore = 100;
+      }
+
+      checkWinningState(score) {
+        if (score >= this.winningScore) {
+          console.log("Congratulations! You won the Car Game.");
+        } else {
+          console.log("Sorry, you lost the Car Game.");
+        }
+      }
+    }
+
+    class PuzzleGame extends Game {
+      constructor(level, theme, avatar, timeLimit) {
+        super(level, theme, avatar);
+        this.timeLimit = timeLimit;
+      }
+
+      checkWinningState(timeTaken) {
+        if (timeTaken <= this.timeLimit) {
+          console.log("Congratulations! You won the Puzzle Game.");
+        } else {
+          console.log("Sorry, you lost the Puzzle Game.");
+        }
+      }
+    }
+
+    class ShootingGame extends Game {
+      constructor(level, theme, avatar, selectedMission) {
+        super(level, theme, avatar);
+        this.selectedMission = selectedMission;
+      }
+
+      checkWinningState(completedMission) {
+        if (completedMission === this.selectedMission) {
+          console.log("Congratulations! You won the Shooting Game.");
+        } else {
+          console.log("Sorry, you lost the Shooting Game.");
+        }
+      }
+    }
+  </script>
+</head>
+<body></body>
+</html>

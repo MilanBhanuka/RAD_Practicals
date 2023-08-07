@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        var s1= "Programmo";
+        var s2="Phobia";
+
+        function concatStrings(str1,str2)
+        {
+            return str1.concat(str2)
+        }
+        var s3=concatStrings(s1,s2)
+        document.write("01) Concat Strings : "+s3)
+        document.write("<br>")
+
+        function toLower(str)
+        {
+            return str.toLowerCase();
+        }
+        document.write("02)a)   Strings in lowercase : "+toLower(s3))
+        document.write("<br>")
+
+        function toUpper(str)
+        {
+            return str.toUpperCase();
+        }
+        document.write("02)b)   Strings in uppercase : "+toUpper(s3))
+        document.write("<br>")
+
+        function stringSplit(str)
+        {
+            return str.split(",");
+        }
+        var arr = stringSplit("Programmo,Phobia");
+        document.write("02)c)   Split : "+arr);
+        document.write("<br>");
+
+        function stringIndex(str)
+        {
+            return str.indexOf("Phobia");
+        };
+        document.write("02)d)   Index : "+stringIndex(s3));
+        document.write("<br>");
+
+    </script> 
+</body>
+</html>

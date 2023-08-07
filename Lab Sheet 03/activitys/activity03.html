@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <p id="demo"></p>
+
+    <script>
+      //01
+      const games = ["The Last of Us","Uncharted","Good of War","bloodborne"];
+      document.getElementById("demo").innerHTML = games.indexOf("God of War");
+    </script>
+
+    <script>
+      //02
+      function createMap(array) {
+        return new Map(array);
+      }
+      const myArray = [['Name', 'John'],['Age', 30],['City', 'Colombo']];
+      const myMap = createMap(myArray);
+
+      //03
+      function remove(myMap,keyValue){
+        myMap.delete(keyValue);   
+        return myMap;
+      }
+      const updatedMap = remove(myMap,"Age");
+      console.log(updatedMap);
+    </script>
+
+    <script>
+      //04
+      const fruits = new Map();
+      fruits.set("apple",5);
+      fruits.set("banana",3);
+      fruits.set("orange",2);
+
+      const bananaKey = fruits.get("banana");
+      console.log(bananaKey);
+
+      const mapSize = fruits.size;
+      console.log(mapSize);
+    </script>
+  </body>
+</html>

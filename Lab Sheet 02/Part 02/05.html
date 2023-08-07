@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+     <body>
+        <p>Q01--------------------------</p>
+        <script>
+            var time = 13
+            if(time<10)
+            {
+                window.alert("Good Morning");
+            }
+            else if(time<20)
+            {
+                window.alert("Good Day");
+            }
+            else
+            {
+                window.alert("Good Evening");
+            }
+        </script>
+        <br>
+        <p>Q02--------------------------</p>
+        <label>Fruit Name</label>
+        <input type="text" placeholder="fruit" id="value"><br><br>
+        <input type="submit" name="Submit" onclick="getFruit()" value="submit">
+        <script>
+            function getFruit(){
+                var f = document.getElementById("value").value;
+                switch(f){
+                    case "banana":
+                        alert("Yello");
+                         break;
+                    case "pineapple":
+                        alert("Orange")
+                        break;
+                    case "apple":
+                        alert("Green");
+                        break;
+                }
+            }
+        </script>
+        <br>
+        <p>Q03--------------------------</p>
+        <label>First Number : </label>
+        <input type="number" placeholder="First Number" id="value1"><br><br>
+        <label>Second Number : </label>
+        <input type="number" placeholder="First Number" id="value2"><br><br>
+        <label>Third Number : </label>
+        <input type="number" placeholder="First Number" id="value3"><br><br>
+        <input type="submit" name="Submit" onclick="MAX()" value="submit">
+        <script>
+            function MAX(){
+                var A = parseInt(document.getElementById("value1").value);
+                var B = parseInt(document.getElementById("value2").value);
+                var C = parseInt(document.getElementById("value3").value);
+                if(A>B)
+                {
+                    if(A>C)
+                    {
+                        alert("The Largest Number is ",A);
+                    }
+                    else
+                    {
+                        alert("The Largest Number is ",C);
+                    }
+                }
+                else
+                {
+                    if(B>C)
+                    {
+                        alert("The Largest Number is ",B);
+                    }
+                    else
+                    {
+                        alert("The Largest Number is ",C);
+                    }
+                }
+            }
+        </script>
+        <br>
+        <p>Q04--------------------------</p>
+        <lable>Enter a number</lable>
+        <input type="number" id="number">
+        <button onclick="checkPrime()">Check</button>
+        <p id="result"></p>
+        <script>
+            function checkPrime() 
+            {
+                var number = parseInt(document.getElementById("number").value);
+                var isPrime = true;
+
+                if(number == 1)
+                {
+                    isPrime = false;
+                } 
+                else if(number > 1) 
+                {
+                    for(var i = 2; i <= Math.sqrt(number); i++){
+                        if (number % i == 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                }
+                var result = document.getElementById("result");
+                if(isPrime) 
+                {
+                    result.innerHTML = number + " is a prime number.";
+                } 
+                else 
+                {
+                    result.innerHTML = number + " is not a prime number.";
+                }
+            }
+        </script>
+        <br>
+        <p>Q05--------------------------</p>
+        <script>
+            for( var i=1;i<=30;i++)
+            {
+                if(i%2!=0)
+                {
+                    document.write(i);
+                    document.write("<br>")
+                }
+            }
+        </script>
+        <br>
+        <p>Q06--------------------------</p>
+        <script>
+            const numArray =[2,4,8,16,32,64,128];
+            for( var i=0;i<numArray.length;i++)
+            {
+                document.write(numArray[i]+"<br>");
+            }
+        </script>
+        <br>
+        <p>Q07--------------------------</p>
+        <script>
+            const numbers = [80,30,40,50,23];
+            numbers[2]=78;
+            let L = numbers.length;
+            let sortNum  = numbers.sort();
+            document.write(sortNum);
+        </script>
+        <br>
+        <p>Q08--------------------------</p>
+        <script>
+            const names = ["sadun","kamal","nimal","ruwan"];
+            document.write(names.toString());
+            document.write("<br>");
+            names.pop();
+            document.write(names);
+            document.write("<br>");
+            names.push("nuwani");
+            document.write(names);
+        </script>
+        <br>
+        <p>Q09--------------------------</p>
+        <script>
+            const myGirls = ["Cecilie","Lone"];
+            const myBoys = ["Emil","Tibia","Linus"];
+            document.write(myGirls.concat(myBoys));
+            document.write("<br>");
+        </script>
+        <br>
+        <p>Q010--------------------------</p>
+        <script>
+            const numbersArray =[1,13,22,123,49];
+            var sum =0
+            for( var i=0;i<numbersArray.length;i++)
+            {
+                sum=sum+numbersArray[i];
+            }
+            document.write("Sum of array : ",sum)
+        </script>
+        <br>
+     </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        //01
+        function checkBothTrue(value1, value2){
+             return value1 && value2;
+        }
+        document.write(checkBothTrue(true,true))
+        document.write("<br>")
+        document.write(checkBothTrue(true,false))
+        document.write("<br>")
+    </script>
+    <script>
+        //02
+        function type(value){
+            return typeof(value) ;
+        }
+        var num = 5
+        document.write(type(num))
+        document.write("<br>")
+    </script>
+
+    <script>
+        //03
+        function getCurrentDate(){
+            return new Date
+        }
+        var num = 5
+        document.write("current date : ")
+        var d= getCurrentDate()
+        document.write(d)
+        document.write("<br>")
+        document.write("type : ",typeof(d))
+        document.write("<br>")
+    </script>
+    
+    <script>
+        //04
+        var str = "OceanGate"
+        var length = str.length;
+        if(length>10){
+            document.write("Length : "+length);
+        }
+    </script>
+</body>
+</html>

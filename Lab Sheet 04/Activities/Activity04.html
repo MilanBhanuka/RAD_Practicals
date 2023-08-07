@@ -1,0 +1,85 @@
+<html>
+<body>
+
+    <script>
+
+      class Employee{
+
+        constructor(number,name,address,contactNo,NIC,date,designation,salary){
+        
+        this.number=number;
+        this.name=name;
+        this.address=address;
+        this.contactNo=contactNo;
+        this.NIC=NIC;
+        this.designation=designation;
+        this.salary=salary;
+        this.date=date;
+
+        }
+
+        getLunch(){
+
+        }
+
+        reportsDuty(){
+             document.write("Arrives at "+new Date())
+        }
+
+        DutyOff(){
+           document.write("Leaves at "+new Date())
+        }
+
+      }
+
+
+      class permanent extends Employee(){
+         constructor(number,name,address,contactNo,NIC,date,designation,salary){
+            super(number,name,address,contactNo,NIC,date,designation,salary);
+         }
+      
+           
+
+        }
+
+      class contractbased extends Employees(){
+        constructor(number,name,address,contactNo,NIC,date,designation,salary,contractTime,startedTime){
+            super(number,name,address,contactNo,NIC,date,designation,salary);
+            this.startedTime= //the day work started
+            this.currentTime=new Date() - this.startedTime;
+
+            if(currentTime>=12 ){            //12 months
+               requestDutyExtention();
+            }
+        }
+
+        requestDutyExtention(){
+              document.write("Requesting for extend contrat time")
+        }
+      
+
+      }
+       
+      class temporary extends Employee(){
+        constructor(number,name,address,contactNo,NIC,date,designation,salary,contractTime,startedTime){
+            super(number,name,address,contactNo,NIC,date,designation,salary);
+
+            this.startedTime= //the day work started
+            this.currentTime=new Date() - this.startedTime;
+
+            if(currentTime>=6 ){            //6 months
+               requestDutyExtention();
+            }
+        }
+        
+      
+        requestDutyExtention(){
+
+            document.write("Requesting for extend the temporary time")
+        }
+      }
+       
+
+    </script>
+</body>
+</html>
